@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#2196F3</color>
+    <color name="primary_dark">#1976D2</color>
+    <color name="primary_light">#BBDEFB</color>
+    <color name="accent">#9E9E9E</color>
+    <color name="primary_title_text">#FFFFFF</color>
+    <color name="secondary_title_text">#C4C4C4</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#B6B6B6</color>
+
+    <color name="brick_red">#FF212C</color>
+    <color name="brick_red_selected">#BF0103</color>
+    <color name="brick_blue">#2DA4FE</color>
+    <color name="brick_blue_selected">#002DC4</color>
+    <color name="brick_yellow">#F5F940</color>
+    <color name="brick_yellow_selected">#FBD228</color>
+
+    <color name="white">#FFFFFF</color>
+
+</resources>
