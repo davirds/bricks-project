@@ -37,8 +37,8 @@ public class MainActivity extends BaseToolbarActivity {
         recyclerView.setLayoutManager(layoutManager);
         BricksAdapter adapter = new BricksAdapter(listBricks);
         recyclerView.setAdapter(adapter);
-        ItemTouchHelper.Callback callback =
-                new SimpleItemTouchHelperCallback(adapter);
+
+        ItemTouchHelper.Callback callback = new SimpleItemTouchHelperCallback(adapter);
         ItemTouchHelper touchHelper = new ItemTouchHelper(callback);
         touchHelper.attachToRecyclerView(recyclerView);
     }

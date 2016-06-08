@@ -7,11 +7,10 @@ import android.view.ViewGroup;
 
 import com.jarvis.bricksproject.ui.view.base.BaseCustomView;
 
-import java.util.Collections;
 import java.util.List;
 
 public abstract class BaseAdapter<T, V extends BaseCustomView>
-        extends RecyclerView.Adapter<BaseAdapter.BaseViewHolder<T, V>> implements ItemTouchHelperAdapter {
+        extends RecyclerView.Adapter<BaseAdapter.BaseViewHolder<T, V>> {
 
     private int position;
 
@@ -23,6 +22,10 @@ public abstract class BaseAdapter<T, V extends BaseCustomView>
 
     public T getItem(int position) {
         return listValues.get(position);
+    }
+
+    public List<T> getListValues() {
+        return listValues;
     }
 
     @Override
@@ -42,26 +45,6 @@ public abstract class BaseAdapter<T, V extends BaseCustomView>
     @Override
     public int getItemCount() {
         return listValues.size();
-    }
-
-    @Override
-    public void onItemDismiss(int position) {
-        listValues.remove(position);
-        notifyItemRemoved(position);
-    }
-
-    @Override
-    public void onItemMove(int fromPosition, int toPosition) {
-        if (fromPosition < toPosition) {
-            for (int i = fromPosition; i < toPosition; i++) {
-                Collections.swap(listValues, i, i + 1);
-            }
-        } else {
-            for (int i = fromPosition; i > toPosition; i--) {
-                Collections.swap(listValues, i, i - 1);
-            }
-        }
-        notifyItemMoved(fromPosition, toPosition);
     }
 
     public static class BaseViewHolder<T, V extends BaseCustomView>

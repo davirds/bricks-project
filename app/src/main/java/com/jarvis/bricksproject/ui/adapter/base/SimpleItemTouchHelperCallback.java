@@ -3,14 +3,11 @@ package com.jarvis.bricksproject.ui.adapter.base;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 
-/**
- * Created by davirodrigues on 06/03/16.
- */
 public class SimpleItemTouchHelperCallback extends ItemTouchHelper.Callback {
 
-    private final BaseAdapter mAdapter;
+    private final ItemTouchHelperAdapter mAdapter;
 
-    public SimpleItemTouchHelperCallback(BaseAdapter adapter) {
+    public SimpleItemTouchHelperCallback(ItemTouchHelperAdapter adapter) {
         mAdapter = adapter;
     }
 
